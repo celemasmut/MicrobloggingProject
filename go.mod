@@ -1,4 +1,4 @@
-module github.com/celestemasmut/microbloggingProject
+module github.com/celemasmut/microbloggingProject
 
 go 1.15
 
