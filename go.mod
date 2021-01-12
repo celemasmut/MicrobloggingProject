@@ -1,6 +1,6 @@
 module github.com/celemasmut/MicrobloggingProject
 
-go 1.15
+go 1.12
 
 require(
 )
