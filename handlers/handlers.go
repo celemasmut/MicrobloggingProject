@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/celemasmut/MicrobloggingProject/middlew"
+	"github.com/celemasmut/MicrobloggingProject/routers"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
@@ -12,6 +14,8 @@ import (
 //Manejadores seteo el puerto en Handler y pongo a escuchar el servidor
 func Manejadores() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
