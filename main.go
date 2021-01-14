@@ -12,5 +12,5 @@ func main() {
 		log.Fatal("Sin conexion con la BD")
 		return
 	}
-	handlers.Manejadores()
+	handlers.Manejadores() // muestra que la conexion fue exitosa.
 }
