@@ -25,5 +25,5 @@ func InsertoRegistro(u models.Usuario) (string, bool, error) {
 	//InsertedID es una funcion que devuelve un objeto de tipo ObjectID
 	//objID es un objeto de tipo ObjectID
 	objID, _ := result.InsertedID.(primitive.ObjectID)
-	return objID.String(), true, nil //como retorna un stringo se convierte el obj a un string
+	return objID.String(), true, nil //como retorna un string se convierte el obj a un string
 }
