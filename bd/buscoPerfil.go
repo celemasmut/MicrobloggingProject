@@ -12,6 +12,8 @@ import (
 
 //BuscoPerfil busca un perfil en la BD
 func BuscoPerfil(ID string) (models.Usuario, error) {
+	// vamos a usar una petición GET, ya que va a venir como parámetro en la URL
+
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*15)
 	defer cancel()
 	db := MongoCN.Database("microdb")

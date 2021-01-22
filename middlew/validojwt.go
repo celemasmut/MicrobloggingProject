@@ -6,6 +6,8 @@ import (
 	"github.com/celemasmut/MicrobloggingProject/routers"
 )
 
+// este seria el Middleware que va a chequear la validez del JWT,
+
 //ValidoJWT permite validar el JWT que nos viene en la peticion
 func ValidoJWT(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -17,3 +19,5 @@ func ValidoJWT(next http.HandlerFunc) http.HandlerFunc {
 		next.ServeHTTP(w, r)
 	}
 }
+
+//este middlew se usara en Handlers
