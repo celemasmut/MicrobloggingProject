@@ -23,7 +23,6 @@ var IDUsuario string
 Es de las funciones más importantes por la cantidad de veces que la vamos a ejecutar,
 porque valida el token y dice si la credencial y los privilegios son válidos.
 En Go si una función tiene varios parámetros y entre ellos un error, hay que ponerlo al final*/
-
 func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	miClave := []byte("SkillFactoryGo_Avalith")
 	// creo una variable claims de tipo claim del models, se indica como puntero
