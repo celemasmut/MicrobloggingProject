@@ -30,7 +30,7 @@ func LeoTweets(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error al lerr los tweets", http.StatusBadRequest)
 		return
 	}
-	w.Header().Set("content-type", "aplication/json")
+	w.Header().Set("Content-type", "application/json")
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(respuesta)
 }
