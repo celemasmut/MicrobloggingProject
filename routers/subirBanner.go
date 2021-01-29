@@ -12,7 +12,7 @@ import (
 
 //SubirBanner sube el avatar al servidor
 func SubirBanner(w http.ResponseWriter, r *http.Request) {
-	file, handler, err := r.FormFile("banners")
+	file, handler, err := r.FormFile("banner")
 
 	var extension = strings.Split(handler.Filename, ".")[1]
 
